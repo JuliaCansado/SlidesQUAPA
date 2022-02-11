@@ -5,7 +5,7 @@ title:
             <img src='logos-01.png' height='auto' width='300' align='center'>
         </div>
     </div>
-    <h2 class="title toc-ignore"> VISUALIZAÇÃO CÓDIGO <br> GOOGLE EARTH ENGINE </h2>
+    <h2 class="title toc-ignore"> VISUALIZAÇÃO MAPAS <br> GOOGLE EARTH ENGINE </h2>
 
 subtitle: 
   
@@ -21,11 +21,6 @@ output:
       highlightLines: true
       ratio: 16:9
       countIncrementalSlides: true
-      
----
-```{r, echo=FALSE}
-knitr::include_graphics("GEE.png")
-```
 ---
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -49,332 +44,108 @@ style_mono_light(
   code_font_google   = google_font("Roboto"))
 
 ```
+###PARA VISUALIZAR OS MAPAS:
+**1.** [SE CADASTRAR NO GOOGLE EARTH ENGINE](#cadastroGEE)
+<br>
+**2.** [EXECUTAR O CÓDIGO](#execucao)
 
-## CADASTRO GEE
+```{r, echo=FALSE, out.width= "100%", fig.align='center'}
+knitr::include_graphics("GEE.png")
+```
+---
+name: cadastroGEE
 
-Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
+### CADASTRO GOOGLE EARTH ENGINE
 
-[Link to another slide](#colors).
+**1.** Acessar [o site do Google Earth Engine](https://earthengine.google.com/) e clicar em **Sign Up**
 
-### Lorem Ipsum
-
-Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. 
-Lacinia neque mollis nascetur neque urna velit bibendum. 
-Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
-
-- Dolor cubilia nostra nunc sodales
-
-- Consectetur aliquet mauris blandit
-
-- Ipsum dis nec porttitor urna sed
+```{r, echo=FALSE}
+knitr::include_graphics("signup1.png")
+```
 
 ---
-name: colors
+name: contagoogle
+<br>
+**2.** Fazer login na conta Google .left-column[
+**OBS.: De preferência, usar uma conta institucional.** <br>
+<br>
+**É preciso ter/criar uma conta Google (que não requer um email Gmail).**
+].right-column[
+```{r, echo=FALSE, out.height="500", out.width= "auto", fig.align = "center"}
+knitr::include_graphics("signup2.png")
+```
 
-## Colors
-
-.left-column[
-Text color
-
-[Link Color](#3)
-
-**Bold Color**
-
-_Italic Color_
-
-`Inline Code`
 ]
-
-.right-column[
-Lorem ipsum dolor sit amet, [consectetur adipiscing elit (link)](#3), 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Erat nam at lectus urna.
-Pellentesque elit ullamcorper **dignissim cras tincidunt (bold)** lobortis feugiat. 
-_Eros donec ac odio tempor_ orci dapibus ultrices. 
-Id porta nibh venenatis cras sed felis eget velit aliquet.
-Aliquam id diam maecenas ultricies mi.
-Enim sit amet 
-`code_color("inline")`
-venenatis urna cursus eget nunc scelerisque viverra.
-]
-
 ---
+<br>
+**3.** Preencher as informações solicitadas
 
-# Big Topic or Inverse Slides `#`
-
-## Slide Headings `##`
-
-### Sub-slide Headings `###`
-
-#### Bold Call-Out `####`
-
-This is a normal paragraph text. Only use header levels 1-4.
-
-##### Possible, but not recommended `#####`
-
-###### Definitely don't use h6 `######`
-
+```{r, echo=FALSE, out.height="500", out.width= "auto", fig.align = "center"}
+knitr::include_graphics("signup3.png")
+```
 ---
+<br>
+**4.** Aceitar o termo de serviço / Clicar CAPTCHA / Enviar cadastro
 
-# Left-Column Headings
-
-.left-column[
-## First
-
-## Second
-
-## Third
-]
-
-.right-column[
-Dolor quis aptent mus a dictum ultricies egestas.
-
-Amet egestas neque tempor fermentum proin massa!
-
-Dolor elementum fermentum pharetra lectus arcu pulvinar.
-]
-
+```{r, echo=FALSE}
+knitr::include_graphics("signup4.png")
+```
 ---
+<br>
+**5.** Aguardar
+
+```{r, echo=FALSE}
+knitr::include_graphics("signup5.png")
+```
+---
+name: execucao
 class: inverse center middle
 
-# Topic Changing Interstitial
-
---
-
-```
-class: inverse center middle
-```
-
+## EXECUÇÃO DO CÓDIGO
 ---
-layout: true
+### VISUALIZANDO O MAPA PARA ANO E CIDADE DE INTERESSE
+**1.** Clicar no [link para acessar o código](https://code.earthengine.google.com/c62310a9ed389a176ccad8f1b8135ee9)
 
-## Blocks
-
----
-
-### Blockquote
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
----
-
-### Code Blocks
-
-#### R Code
-
-```{r eval=FALSE}
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
-
-#### JavaScript
-
-```js
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+```{r, echo=FALSE}
+knitr::include_graphics("codigo1.png")
 ```
 
 ---
+**2.** O ano padrão é **2020**. Para alterar o ano de visualização é necessário colocar o ano de interesse na linha 5 do código. *Obs.: É possível ver imagens a partir de 2013.* 
 
-### More R Code
-
-```{r eval=FALSE}
-dplyr::starwars %>% dplyr::slice_sample(n = 4)
+```{r, echo=FALSE}
+knitr::include_graphics("codigo2.png")
 ```
 
 ---
+**3.** É possivel navegar até a cidade de interesse através do campo de busca do Google Earth Engine **(1)**, ou pelo visualizador da plataforma **(2)**.
 
-```{r message=TRUE, eval=requireNamespace("cli", quietly = TRUE)}
-cli::cli_alert_success("It worked!")
-```
-
---
-
-```{r message=TRUE}
-message("Just a friendly message")
-```
-
---
-
-```{r warning=TRUE}
-warning("This could be bad...")
-```
-
---
-
-```{r error=TRUE}
-stop("I hope you're sitting down for this")
-```
-
-
----
-layout: true
-
-## Tables
-
----
-exclude: `r if (requireNamespace("tibble", quietly=TRUE)) "false" else "true"`
-
-```{r eval=requireNamespace("tibble", quietly=TRUE)}
-tibble::as_tibble(mtcars)
+```{r, echo=FALSE}
+knitr::include_graphics("codigo3.png")
 ```
 
 ---
+**4.** Para ver se o Mapa gerado corresponde à imagem de satélite original, podemos desligar ou mudar a opacidade das camadas no visualizador da plataforma.
 
-```{r}
-knitr::kable(head(mtcars), format = 'html')
+```{r, echo=FALSE}
+knitr::include_graphics("codigo4.png")
 ```
 
 ---
-exclude: `r if (requireNamespace("DT", quietly=TRUE)) "false" else "true"`
+**5.** O triângulo abaixo demonstra o que deveriam significar as cores do mapa.
 
-```{r eval=requireNamespace("DT", quietly=TRUE)}
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
+```{r, echo=FALSE, out.height="550", out.width= "auto", fig.align='center'}
+knitr::include_graphics("triangulo.png")
 ```
-
----
-layout: true
-
-## Lists
-
----
-
-.pull-left[
-#### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-]
-
-.pull-right[
-
-#### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-]
-
----
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
----
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
----
-layout: true
-
-## Plots
-
----
-
-```{r plot-example, eval=requireNamespace("ggplot2", quietly=TRUE)}
-library(ggplot2)
-(g <- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
-
----
-
-```{r plot-example-themed, eval=requireNamespace("showtext", quietly=TRUE) && requireNamespace("ggplot2", quietly=TRUE)}
-g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-  ggtitle("A Plot About Cars")
-```
-
-.footnote[Requires `{showtext}`]
-
----
-layout: false
-
-## Square image
-
-<center><img src="https://octodex.github.com/images/labtocat.png" alt="GithHub Octocat" height="400px" /></center>
-
-.footnote[GitHub Octocat]
-
----
-
-### Wide image
-
-![A wide image with a diagram of branching in git.](https://docs.github.com/assets/images/help/repository/branching.png)
-
-.footnote[Wide images scale to 100% slide width]
-
----
-
-## Two images
-
-.pull-left[
-![A GitHub Octocat, style "mother hubber"](https://octodex.github.com/images/motherhubbertocat.png)
-]
-
-.pull-right[
-![A GitHub Octocat, style "dinotcat"](https://octodex.github.com/images/dinotocat.png)
-]
-
----
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
 ---
 class: center, middle
 
-# Thanks!
+### OBRIGADA!
 
-Slides created via the R packages:
+Qualquer dúvida enviar e-mail para:
+<br>
+**ma.hirye@alumni.usp.br** <br>
+**julia.cansado@usp.br**
+<br>
 
-[**xaringan**](https://github.com/yihui/xaringan)<br>
-[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
