@@ -1,26 +1,32 @@
 ---
-title: <div id="column">
+title:  
+    <div >
         <div class = "blocks">
-            <img src='https://user-images.githubusercontent.com/68694598/131130259-1054654f-c21f-43a4-88b2-670206bdd19b.png' height='auto' width='165' align='center'>
+            <img src='logos-01.png' height='auto' width='300' align='center'>
         </div>
+    </div>
+    <h2 class="title toc-ignore"> VISUALIZAÇÃO CÓDIGO <br> GOOGLE EARTH ENGINE </h2>
 
-subtitle: "VISUALIZAÇÃO GOOGLE EARTH ENGINE"
-author: 
-  - "RStudio"
-  - " "
-  - " "
-date: 
+subtitle: 
+  
+author: "Laboratório QUAPÁ | FAUUSP"
+date:
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
     nature:
+      lib_dir: SlidesQUAPA
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
       ratio: 16:9
       countIncrementalSlides: true
+      
 ---
-
+```{r, echo=FALSE}
+knitr::include_graphics("GEE.png")
+```
+---
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(
@@ -36,11 +42,15 @@ knitr::opts_chunk$set(
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_mono_light(base_color = "#79B937")
+style_mono_light(
+  base_color = "#79B937",
+  header_font_google = google_font("Lato"),
+    text_font_google   = google_font("Roboto", "300", "300i"),
+  code_font_google   = google_font("Roboto"))
 
 ```
 
-## Typography
+## CADASTRO GEE
 
 Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
 
