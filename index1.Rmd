@@ -98,46 +98,6 @@ knitr::include_graphics("signup4.png")
 knitr::include_graphics("signup5.png")
 ```
 ---
-name: execucao
-class: inverse center middle
-
-## EXECUÇÃO DO CÓDIGO
----
-### VISUALIZANDO O MAPA PARA ANO E CIDADE DE INTERESSE
-**1.** Clicar no [link para acessar o código](https://code.earthengine.google.com/c62310a9ed389a176ccad8f1b8135ee9)
-
-```{r, echo=FALSE}
-knitr::include_graphics("codigo1.png")
-```
-
----
-**2.** O ano padrão é **2020**. Para alterar o ano de visualização é necessário colocar o ano de interesse na linha 5 do código. *Obs.: É possível ver imagens a partir de 2013.* 
-
-```{r, echo=FALSE}
-knitr::include_graphics("codigo2.png")
-```
-
----
-**3.** É possivel navegar até a cidade de interesse através do campo de busca do Google Earth Engine **(1)**, ou pelo visualizador da plataforma **(2)**.
-
-```{r, echo=FALSE}
-knitr::include_graphics("codigo3.png")
-```
-
----
-**4.** Para ver se o Mapa gerado corresponde à imagem de satélite original, podemos desligar ou mudar a opacidade das camadas no visualizador da plataforma.
-
-```{r, echo=FALSE}
-knitr::include_graphics("codigo4.png")
-```
-
----
-**5.** O triângulo abaixo demonstra o que deveriam significar as cores do mapa.
-
-```{r, echo=FALSE, out.height="550", out.width= "auto", fig.align='center'}
-knitr::include_graphics("triangulo.png")
-```
----
 class: center, middle
 
 ### OBRIGADA!
