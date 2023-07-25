@@ -5,7 +5,7 @@ title:
             <img src='logos-01.png' height='auto' width='300' align='center'>
         </div>
     </div>
-    <h2 class="title toc-ignore"> VISUALIZAÇÃO MAPAS <br> GOOGLE EARTH ENGINE </h2>
+    <h2 class="title toc-ignore"> CADASTRO <br> GOOGLE EARTH ENGINE </h2>
 
 subtitle: 
   
@@ -44,15 +44,6 @@ style_mono_light(
   code_font_google   = google_font("Roboto"))
 
 ```
-###PARA VISUALIZAR OS MAPAS:
-**1.** [SE CADASTRAR NO GOOGLE EARTH ENGINE](#cadastroGEE)
-<br>
-**2.** [EXECUTAR O CÓDIGO](#execucao)
-
-```{r, echo=FALSE, out.width= "100%", fig.align='center'}
-knitr::include_graphics("GEE.png")
-```
----
 name: cadastroGEE
 
 ### CADASTRO GOOGLE EARTH ENGINE
@@ -98,55 +89,15 @@ knitr::include_graphics("signup4.png")
 knitr::include_graphics("signup5.png")
 ```
 ---
-
-name: execucao
-class: inverse center middle
-
-## EXECUÇÃO DO CÓDIGO
----
-### VISUALIZANDO O MAPA PARA ANO E CIDADE DE INTERESSE
-**1.** Clicar no [link para acessar o código](https://code.earthengine.google.com/c62310a9ed389a176ccad8f1b8135ee9)
-
-```{r, echo=FALSE}
-knitr::include_graphics("codigo1.png")
-```
-
----
-**2.** O ano padrão é **2020**. Para alterar o ano de visualização é necessário colocar o ano de interesse na linha 5 do código. *Obs.: É possível ver imagens a partir de 2013.* 
-
-```{r, echo=FALSE}
-knitr::include_graphics("codigo2.png")
-```
-
----
-**3.** É possivel navegar até a cidade de interesse através do campo de busca do Google Earth Engine **(1)**, ou pelo visualizador da plataforma **(2)**.
-
-```{r, echo=FALSE}
-knitr::include_graphics("codigo3.png")
-```
-
----
-**4.** Para ver se o Mapa gerado corresponde à imagem de satélite original, podemos desligar ou mudar a opacidade das camadas no visualizador da plataforma.
-
-```{r, echo=FALSE}
-knitr::include_graphics("codigo4.png")
-```
-
----
-**5.** O triângulo abaixo demonstra o que deveriam significar as cores do mapa.
-
-```{r, echo=FALSE, out.height="550", out.width= "auto", fig.align='center'}
-knitr::include_graphics("triangulo.png")
-```
----
 class: center, middle
 
 ### OBRIGADA!
 
 Qualquer dúvida enviar e-mail para:
 <br>
+**julia.cansado@usp.br** <br>
 **ma.hirye@alumni.usp.br** <br>
-**julia.cansado@usp.br**
+**tmicheleti@usp.br **
 <br>
 
 
